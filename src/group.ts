@@ -1,5 +1,5 @@
 class Group {
-  group!: any[]
+  private group: any[] = []
 
   add(animation: any) {
     this.group.push(animation)
