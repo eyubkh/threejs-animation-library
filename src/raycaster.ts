@@ -1,8 +1,8 @@
-import * as THREE from 'three'
+import { Vector2, Raycaster } from 'three'
 
-class Raycaster {
-  raycaster = new THREE.Raycaster()
-  pointer = new THREE.Vector2()
+class RaycasterEvent {
+  raycaster = new Raycaster()
+  pointer = new Vector2()
 
   meshArray = []
 
@@ -37,4 +37,4 @@ class Raycaster {
   }
 }
 
-export default Raycaster
+export default RaycasterEvent

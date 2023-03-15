@@ -1,6 +1,6 @@
-import * as THREE from 'three'
-import Raycaster from './raycaster'
+import { Vector3 } from 'three'
 import { group } from './index'
+import Raycaster from './raycaster'
 
 type ObjectTypes = {
   mesh?: any
@@ -15,10 +15,11 @@ type ObjectTypes = {
 
 class Animate {
   object: ObjectTypes = {}
+  vector: any = new Vector3(0,0,-1)
 
   animate(mesh: any) {
     this.object.mesh = mesh
-    this.object.from = new THREE.Vector3().add(mesh.position)
+    this.object.from = new Vector3().add(mesh.position)
 
     return this
   }
@@ -36,15 +37,15 @@ class Animate {
   }
 
   to(x: number, y: number, z: number) {
-    this.object.to = new THREE.Vector3(x, y, z)
+    this.object.to = new Vector3(x, y, z)
 
     return this
   }
 
-  cameraLookAt(mesh: any, camera: any) {
+  lookAt(mesh: any, camera: any) {
     camera.lookAt(mesh.position)
 
-    this.object.lookAt = this.cameraLookAt.bind(this, mesh, camera)
+    this.object.lookAt = this.lookAt.bind(this, mesh, camera)
     return this
   }
 
