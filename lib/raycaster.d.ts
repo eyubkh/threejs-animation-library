@@ -1,7 +1,7 @@
-import * as THREE from 'three';
-declare class Raycaster {
-    raycaster: THREE.Raycaster;
-    pointer: THREE.Vector2;
+import { Vector2, Raycaster } from 'three';
+declare class RaycasterEvent {
+    raycaster: Raycaster;
+    pointer: Vector2;
     meshArray: never[];
     mesh: any;
     camera: any;
@@ -11,4 +11,4 @@ declare class Raycaster {
     onHover(event: any): void;
     render(): void;
 }
-export default Raycaster;
+export default RaycasterEvent;
