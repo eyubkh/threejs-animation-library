@@ -2,7 +2,7 @@
   "name": "threejs-animation-library",
   "version": "0.0.0",
   "description": "A threejs animation library",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/eyubkh/threejs-animation-library.git"
   },
-  "author": "Ayoub Khalfaoui Hadi",
+  "author": "https://github.com/eyubkh",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eyubkh/threejs-animation-library/issues"
